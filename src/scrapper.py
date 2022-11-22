@@ -14,10 +14,12 @@ wd = webdriver.Chrome(executable_path='./chromedriver.exe')
 wd.get(url)
 
 # get the number of jobs
-# no_of_jobs = wd.find_element(By.CSS_SELECTOR, 'span.results-context-header__new-jobs`')
-no_of_jobs = wd.find_element(By.CSS_SELECTOR, 'h1>span')
-print('test: ', no_of_jobs.get_attribute(name='class'))
+no_of_jobs = wd.find_element(By.CSS_SELECTOR, 'span.results-context-header__new-jobs')
+# no_of_jobs = wd.find_element(By.CSS_SELECTOR, 'h1>span')
+# print('test: ', no_of_jobs.get_attribute(name='class'))
 # print('test: ', no_of_jobs.getText())
+print("attributes: ", dir(no_of_jobs))
+print("text: ", no_of_jobs.text)
 
-print('the number of jobs are: \n', no_of_jobs)
+# print('the number of jobs are: \n', no_of_jobs)
 
